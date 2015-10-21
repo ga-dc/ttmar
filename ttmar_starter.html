@@ -56,10 +56,75 @@
   <p class="second_chorus" style="display:none">Go on take the money and run</p>
   <p class="second_chorus" style="display:none">Go on take the money and run</p>
 
-
-
-
 </body>
 <script>
+var first_P = document.getElementById("first_paragraph");
+var second_P = document.getElementById("second_paragraph");
+var third_P = document.getElementById("first_chorus");
+var fourth_P = document.getElementById("third_paragraph");
+var fifth_P = document.getElementById("fourth_paragraph");
+var sixth_P = document.getElementById("second_chorus");
+
+var third_PArray = document.getElementsByClassName("third_paragraph");
+var third_PArrayString = ""
+for(i=0;i<third_PArray.length;i++){
+  third_PArrayString = third_PArrayString + third_PArray[i].innerHTML + "<br>";
+}
+
+var fourth_PArray = document.getElementsByClassName("fourth_paragraph");
+var fourth_PArrayString = ""
+for(i=0;i<fourth_PArray.length;i++){
+  fourth_PArrayString = fourth_PArrayString + fourth_PArray[i].innerHTML + "<br>";
+}
+
+var second_CArray = document.getElementsByClassName("second_chorus");
+var second_CArrayString = ""
+
+var setColor = function() {
+  document.body.style.backgroundColor = "Red";
+}
+
+var SecondPF = function(){
+  document.getElementsByClassName("first_paragraph")[0].innerHTML= document.getElementsByClassName("second_paragraph")[0].innerHTML;
+}
+
+var ThirdPF = function(evt){
+  evt.preventDefault();
+  document.getElementsByClassName("first_paragraph")[0].innerHTML= document.getElementsByClassName("first_chorus")[0].innerHTML;
+}
+
+var FourthPF = function(evt){
+  evt.preventDefault();
+  document.getElementsByClassName("first_paragraph")[0].innerHTML= third_PArrayString;
+}
+
+var FifthPF = function(evt){
+  evt.preventDefault();
+  document.getElementsByClassName("first_paragraph")[0].innerHTML= fourth_PArrayString;
+}
+
+var SCcounter = 0
+var testArray = []
+
+var SixthPF = function(evt){
+evt.preventDefault();
+  if (SCcounter < 6){
+    testArray.unshift(second_CArray[0].innerHTML);
+      second_CArrayString = ""
+      for(i=0;i<testArray.length;i++){
+        second_CArrayString = second_CArrayString + testArray[i] + "<br>"
+      }
+    SCcounter +=1
+  }
+  document.getElementsByClassName("first_paragraph")[0].innerHTML= second_CArrayString;
+}
+
+first_P.addEventListener('click',setColor);
+second_P.addEventListener('click',SecondPF);
+third_P.addEventListener('click',ThirdPF);
+fourth_P.addEventListener('click',FourthPF);
+fifth_P.addEventListener('click',FifthPF);
+sixth_P.addEventListener('click',SixthPF)
+
 
 </script>
