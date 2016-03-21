@@ -3,9 +3,9 @@
   <meta charset="utf-8">
   <title>Take the money and run</title>
   <style>
-    body{
-      text-align: center;
-    }
+  body{
+    text-align: center;
+  }
   </style>
 </head>
 <body>
@@ -61,5 +61,66 @@
 
 </body>
 <script>
+var firstEvent = document.querySelector("#first_paragraph");
+var firstBlock = document.querySelector(".first_paragraph");
 
+firstEvent.addEventListener("click", function(){
+  console.log("hi");
+  firstBlock.style.background= "#000";
+})
+
+
+var secondEvent = document.querySelector("#second_paragraph");
+var secondBlock = document.querySelector(".second_paragraph");
+
+secondEvent.addEventListener("click", function(){
+  secondBlock.style.display="block";
+})
+
+
+var thirdEvent = document.querySelector("#first_chorus");
+var thirdBlock = document.querySelector(".first_chorus");
+
+thirdEvent.addEventListener("click", function(){
+  event.preventDefault();
+  thirdBlock.style.display="block";
+})
+
+
+var fourthEvent = document.querySelector("#third_paragraph");
+var fourthBlock = document.querySelector(".third_paragraph");
+
+fourthEvent.addEventListener("click", function(){
+  event.preventDefault();
+  for (i=0; i < 4; i++){
+    fourthBlock.style.display="block";
+    fourthBlock = fourthBlock.nextElementSibling;
+  }
+})
+
+
+var fifthEvent = document.querySelector("#fourth_paragraph");
+var fifthBlock = document.querySelector(".fourth_paragraph");
+
+fifthEvent.addEventListener("click", function(){
+  event.preventDefault();
+  for (i=0; i < 7; i++){
+    fifthBlock.style.display="block";
+    fifthBlock = fifthBlock.nextElementSibling;
+  }
+})
+
+
+var sixthEvent = document.querySelector("#second_chorus");
+var sixthBlock = document.querySelector(".second_chorus");
+var clickCount = 0;
+
+sixthEvent.addEventListener("click", function(){
+  event.preventDefault();
+  clickCount++;
+  if (clickCount < 7) {
+    sixthBlock.style.display="block";
+    sixthBlock = sixthBlock.nextElementSibling;
+  }
+})
 </script>
