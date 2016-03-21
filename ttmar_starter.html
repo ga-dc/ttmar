@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  
+
 <head>
   <meta charset="utf-8">
   <title>Take the money and run</title>
@@ -60,6 +60,42 @@
 
 
   <script>
+
+
+  document.getElementById("first_paragraph").addEventListener("click",function() {
+    document.getElementsByTagName('body')[0].style.backgroundColor = "gray"
+  })
+
+  document.getElementById("second_paragraph").addEventListener("click",function() {
+    event.preventDefault();
+    document.getElementsByClassName("second_paragraph")[0].style.display = "block"
+  })
+
+  document.getElementById("first_chorus").addEventListener("click",function() {
+    event.preventDefault();
+    for (var i=0; i<document.getElementsByClassName("first_chorus").length;i++){
+    document.getElementsByClassName("first_chorus")[i].style.display = "block"};
+  })
+
+  document.getElementById("third_paragraph").addEventListener("click",function() {
+    event.preventDefault();
+    for (var i=0; i<document.getElementsByClassName("third_paragraph").length;i++){
+    document.getElementsByClassName("third_paragraph")[i].style.display = "block"};
+  })
+
+  document.getElementById("fourth_paragraph").addEventListener("click",function() {
+    event.preventDefault();
+    for (var i=0; i<document.getElementsByClassName("fourth_paragraph").length;i++){
+    document.getElementsByClassName("fourth_paragraph")[i].style.display = "block"};
+  })
+
+    var counter=0;
+
+  document.getElementById("second_chorus").addEventListener("click",function() {
+    event.preventDefault();
+    counter = counter+1;
+    document.getElementsByClassName("second_chorus")[counter-1].style.display = "block";
+  })
 
   </script>
 </body>
