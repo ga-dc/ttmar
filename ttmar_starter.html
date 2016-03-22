@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  
+
 <head>
   <meta charset="utf-8">
   <title>Take the money and run</title>
@@ -60,6 +60,45 @@
 
 
   <script>
+    var paragraph1 = document.getElementById("first_paragraph");
+    paragraph1.addEventListener("click", function() {
+      document.body.style.background = "#ccc";
+    })
+
+    var paragraph2 = document.getElementById("second_paragraph");
+    paragraph2.addEventListener("click", function() {
+      document.querySelector(".second_paragraph").style.display = "block";
+    })
+
+    var paragraph3 = document.getElementById("first_chorus");
+    paragraph3.addEventListener("click", function(event) {
+      event.preventDefault(event);
+      document.querySelector(".first_chorus").style.display = "block";
+    })
+
+    var paragraph4 = document.getElementById("third_paragraph");
+    paragraph4.addEventListener("click", function(event) {
+      event.preventDefault(event);
+      var thirdArray = document.querySelectorAll(".third_paragraph");
+      for(var i = 0; i < thirdArray.length; i++) {
+        thirdArray[i].style.display = "block";
+      }
+    })
+
+    var paragraph5 = document.getElementById("fourth_paragraph");
+    paragraph5.addEventListener("click", function(event) {
+      event.preventDefault(event);
+      var fourthArray = document.querySelectorAll(".fourth_paragraph");
+      for(var i = 0; i < fourthArray.length; i++) {
+        fourthArray[i].style.display = "block";
+      }
+    })
+
+    var paragraph6 = document.getElementById("second_chorus");
+    paragraph6.addEventListener("click", function(event) {
+      event.preventDefault(event);
+      document.querySelector(".second_chorus").style.display = "block";
+    })
 
   </script>
 </body>
