@@ -57,9 +57,40 @@
   <p class="second_chorus" style="display:none">Go on take the money and run</p>
 
 
+  <script>
+  var firstEvent = document.querySelector("#first_paragraph")
+    firstEvent.addEventListener("click", function() {
+      document.body.style.background = "grey"
+    })
 
+  var secondEvent = document.querySelector("#second_paragraph")
+      secondEvent.addEventListener("click", function() {
+        document.querySelector(".second_paragraph").style.display = "block";
+      })
+
+  var thirdEvent = document.querySelector("#first_chorus")
+      thirdEvent.addEventListener("click", function(event) {
+        event.preventDefault();
+        document.querySelector(".first_chorus").style.display = "block";
+      })
+
+  var fourthEvent = document.querySelector("#third_paragraph")
+      fourthEvent.addEventListener("click", function(event) {
+        event.preventDefault();
+        var lyrics = document.querySelectorAll(".third_paragraph")
+          for (var i = 0; i < lyrics.length; i = i + 1) {
+            lyrics[i].style.display = "block"
+          }
+      })
+
+  var fifthEvent = document.querySelector("#fourth_paragraph")
+    fifthEvent.addEventListener("click", function(event) {
+      event.preventDefault();
+      var lyrics = document.querySelectorAll(".fourth_paragraph")
+        for (var i = 0; i < lyrics.length; i = i + 1) {
+          lyrics[i].style.display = "block"
+        }
+    })
+  </script>
 
 </body>
-<script>
-
-</script>
