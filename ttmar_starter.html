@@ -54,12 +54,41 @@
   <p class="second_chorus" style="display:none">Go on take the money and run</p>
   <p class="second_chorus" style="display:none">Go on take the money and run</p>
   <p class="second_chorus" style="display:none">Go on take the money and run</p>
-  <p class="second_chorus" style="display:none">Go on take the money and run</p>
+  <p class="second_chorus" style="display:none">Go on take the money and run
 
 
 
 
 </body>
 <script>
+var firstEvent = document.queryselector("#fist_paragraph")
+firstEvent.addEventListner("click", function
+()){document.body.style.background = "#ccc"}
+
+var lyrics=document.querySelectorAll("first_paragraph")
+for (var i = 0; i < lyrics.length; i = i + 1{
+  lyrics[i].style.display = "block"
+})
+var secondEvent = document.queryselector("#second_paragraph")
+secondEvent.addEventListner("click", function
+()){document.body.style.background = "#ccc"}
+
+var thirdEvent = document.queryselector("#first_chorus")
+thirdEvent.addEventListner("click", function
+()){document.querySelector("second_paragraph").style.background = "block";
+})
+
+
+var fourthEvent = document.queryselector("#first_chorus")
+thirdEvent.addEventListner("click", function(event){
+  event.preventDefault();
+()){document.querySelector("first_chorus").style.background = "block";
+}
+console.log();
+var thirdEvent = document.queryselector("#third_paragraph")
+thirdEvent.addEventListner("click", function
+()){document.body.style.background = "#ccc"}
+console.log();
+
 
 </script>
