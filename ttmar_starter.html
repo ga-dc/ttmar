@@ -60,9 +60,28 @@
 
 </body>
   <script>
+
     var firstEvent = document.querySelector("#first_paragraph")
-    firstEvent.addEventListener("click", function(){
-      document.body.style.background = "#ccc"
+      firstEvent.addEventListener("click", function(){  //Changes background to gray
+        document.body.style.background = "#ccc"
+    });
+
+    var secondEvent = document.querySelector("#second_paragraph")
+      secondEvent.addEventListener("click", function(){
+      //document.body.p.style="display:show" doesn't work
+        document.querySelector('.second_paragraph').style.display="block"
+      //document.getElementById("#second_paragraph").style.background = "#333" doesn't work either
+      console.log("Second click");
+    });
+    var thirdEvent = document.querySelector("#first_chorus")
+      thirdEvent.addEventListener("click", function(evt){
+      evt.preventDefault()
+      console.log("you clicked the anchor!")
+
+      //thirdEvent.addEventListener("click", function(){
+        //console.log("third click")
+        //document.querySelector('.a').preventDefault()
+      document.querySelector('.first_chorus').style.display="block"
     });
   </script>
 
