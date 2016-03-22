@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  
+
 <head>
   <meta charset="utf-8">
   <title>Take the money and run</title>
@@ -18,8 +18,8 @@
     Two young lovers with nothin' better to do<br>
     Than sit around the house, have fun, and watch the tube<br>
     And here is what happened when they decided to cut loose<br>
-  </div>
 
+  </div>
   <p><a id="second_paragraph" href="#">Click me Second!</a></p>
   <div class="second_paragraph" style="display:none">
     They headed down to, ooh, old El Paso<br>
@@ -27,7 +27,6 @@
     Billy Joe shot a man while robbing his castle<br>
     Bobbie Sue took the money and run
   </div>
-
   <p><a id="first_chorus" href="www.google.com">Click me Third!</a></p>
   <div class="first_chorus" style="display:none">
     Go on take the money and run<br>
@@ -60,7 +59,42 @@
 
 
   <script>
+var firstEvent = document.querySelector("#first_paragraph")
+      firstEvent.addEventListener("click", function(){
+      document.body.style.background = "#ccc"
+})
+
+var secondEvent = document.querySelector("#second_paragraph")
+    secondEvent.addEventListener("click", function(){
+    document.querySelector(".second_paragraph").style.display = "block"
+    })
+var thirdEvent = document.querySelector("#first_chorus")
+    thirdEvent.addEventListener("click", function(evt){
+      evt.preventDefault();
+      document.querySelector(".first_chorus").style.display = "block"
+    })
+var fourthEvent = document.querySelector("#third_paragraph")
+    fourthEvent.addEventListener("click", function(evt){
+      evt.preventDefault();
+      var elements = document.querySelectorAll(".third_paragraph")
+      for (var i = 0; i < elements.length; i++){
+        elements[i].style.display = "block"
+  }
+})
+var fifthEvent = document.querySelector("#fourth_paragraph")
+    fifthEvent.addEventListener("click", function(evt){
+      evt.preventDefault();
+      var elements = document.querySelectorAll(".fourth_paragraph")
+      for (var i = 0; i < elements.length; i++){
+        elements[i].style.display = "block"
+    }
+    })
+
+
 
   </script>
 </body>
 </html>
+
+<!-- 1) How are we supposed to test this? The page shows up blank when opened in the browser,
+ and the javascript blocks can't be entered into the console separately.  -->
