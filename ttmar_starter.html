@@ -56,10 +56,15 @@
   <p class="second_chorus" style="display:none">Go on take the money and run</p>
   <p class="second_chorus" style="display:none">Go on take the money and run</p>
 
-
-
-
 </body>
+
 <script>
+document.getElementById("first_paragraph").addEventListener("click",function(){
+    document.body.style.background = "grey"
+  })
+  document.getElementById("second_paragraph").addEventListener("click", function(){
+    document.querySelector(".second_paragraph").style.display = "block"
+  })
+
 
 </script>
