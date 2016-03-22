@@ -61,5 +61,66 @@
 
 </body>
 <script>
+  var firstEvent = document.querySelector("#first_paragraph");
+  firstEvent.addEventListener("click", function() {
+    activeSec = document.querySelector(".first_paragraph");
+    activeSec.style.color = "black";
+    document.body.style.background = "green";
+  });
+
+  var secondEvent = document.querySelector("#second_paragraph");
+  secondEvent.addEventListener("click", function() {
+    activeSec = document.querySelector(".second_paragraph");
+    activeSec.style.display = "block";
+    document.body.style.background = "lemonchiffon";
+  });
+
+  var thirdEvent = document.querySelector("#first_chorus");
+  thirdEvent.addEventListener("click", function() {
+    event.preventDefault();
+    activeSec = document.querySelector(".first_chorus");
+    activeSec.style.display = "block";
+    document.body.style.background = "chocolate";
+  });
+
+  var fourthEvent = document.querySelector("#third_paragraph");
+  fourthEvent.addEventListener("click", function() {
+    event.preventDefault();
+    activeSec = document.querySelectorAll(".third_paragraph");
+    for (var i = 0; i < activeSec.length; i ++) {
+      activeSec[i].style.display = "block";
+    }
+    document.body.style.background = "orange";
+  })
+
+  var fifthEvent = document.querySelector("#fourth_paragraph");
+  fifthEvent.addEventListener("click", function() {
+    event.preventDefault();
+    activeSec = document.querySelectorAll(".fourth_paragraph");
+    for (var i = 0; i < activeSec.length; i ++) {
+      activeSec[i].style.display = "block";
+    }
+    document.body.style.background = "maroon";
+  })
+
+  var lines=0;
+  function getColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = "#";
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+
+  var finalEvent = document.querySelector("#second_chorus");
+  finalEvent.addEventListener("click", function() {
+    event.preventDefault();
+    activeArray = document.querySelectorAll(".second_chorus");
+    activeArray[lines].style.display = "block";
+    lines ++
+    document.body.style.background = getColor();
+  });
 
 </script>
