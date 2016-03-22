@@ -61,5 +61,44 @@
 
 </body>
 <script>
+var firstEvent = document.querySelector("#first_paragraph")
+firstEvent.addEventListener("click", function(){
+  document.body.style.background = "orange"
+})
+var secondEvent = document.querySelector("#second_paragraph")
+secondEvent.addEventListener("click", function(){
+  var secondParagraph = document.querySelector(".second_paragraph")
+  secondParagraph.style.display = "inline"
+})
+var thirdEvent = document.querySelector("#first_chorus")
+thirdEvent.addEventListener("click", function(event){
+  var firstChorus = document.querySelector(".first_chorus")
+  event.preventDefault()
+  firstChorus.style.display = "inline"
+})
+var fourthEvent = document.querySelector("#third_paragraph")
+  fourthEvent.addEventListener("click", function(event){
+    event.preventDefault();
+    var thirdParagraph = document.querySelectorAll("p.third_paragraph")
+    var i;
+    for (i=0; i<thirdParagraph.length; i++)
+      thirdParagraph[i].style.display = "block";
+  })
+var fifthEvent = document.querySelector("#fourth_paragraph")
+  fifthEvent.addEventListener("click", function(event){
+    event.preventDefault();
+    var fourthParagraph = document.querySelectorAll("p.fourth_paragraph")
+    var i;
+    for (i=0; i<fourthParagraph.length; i++)
+      fourthParagraph[i].style.display = "block";
+    })
 
+var sixthEvent = document.querySelector("#second_chorus")
+  sixthEvent.addEventListener("click", function(event){
+  event.preventDefault();})
+//   var secondChorus = document.querySelectorAll("p.second_chorus")
+//   var i;
+//   for(i=0; i < secondChorus.length; i++){
+//         secondChorus[i].style.display = "block";
+//       })
 </script>
