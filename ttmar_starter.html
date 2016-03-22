@@ -83,6 +83,14 @@
         //document.querySelector('.a').preventDefault()
       document.querySelector('.first_chorus').style.display="block"
     });
+
+    var fourthEvent = document.querySelector("#third_paragraph")
+      fourthEvent.addEventListener("click", function(evt){
+        evt.preventDefault()
+        console.log("clicked third paragraph")
+        document.querySelector(".third_paragraph").style.display=""
+
+      });
   </script>
 
 </html>
